@@ -1,0 +1,479 @@
+
+
+============================== 14:43:31.315703 | 1d2e2978-223e-47db-bd08-8c5d0c30ab3f ==============================
+[0m14:43:31.315703 [info ] [MainThread]: Running with dbt=1.5.0
+[0m14:43:31.317936 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/azureuser/dbt-normalize/normalize', 'log_path': '/home/azureuser/dbt-normalize/normalize/../logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'log_format': 'default', 'introspect': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'send_anonymous_usage_stats': 'False'}
+[0m14:43:31.328047 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `log-path` config in `dbt_project.yml` has been deprecated, and will no longer be supported in a future version of
+dbt-core. If you wish to write dbt logs to a custom directory, please use the --log-path CLI flag or DBT_LOG_PATH env
+var instead.
+[0m14:43:31.345262 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-8rsuhoom'
+[0m14:43:31.345703 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/fishtown-analytics/dbt-utils.git 859fd0fa21176efee375a447937f7a46"
+[0m14:43:31.588751 [debug] [MainThread]: STDOUT: "b''"
+[0m14:43:31.589159 [debug] [MainThread]: STDERR: "b"Cloning into '859fd0fa21176efee375a447937f7a46'...\n""
+[0m14:43:31.589539 [debug] [MainThread]: Pulling new dependency 859fd0fa21176efee375a447937f7a46.
+[0m14:43:31.589842 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m14:43:31.591094 [debug] [MainThread]: STDOUT: "b'e9d23b5c152422d6a294c71199e595f4224ca966\n'"
+[0m14:43:31.591334 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:31.591551 [debug] [MainThread]: Checking out revision 0.8.2.
+[0m14:43:31.591772 [debug] [MainThread]: Executing "git remote set-branches origin 0.8.2"
+[0m14:43:31.593076 [debug] [MainThread]: STDOUT: "b''"
+[0m14:43:31.593309 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:31.593529 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.8.2"
+[0m14:43:31.935948 [debug] [MainThread]: STDOUT: "b''"
+[0m14:43:31.936437 [debug] [MainThread]: STDERR: "b'From https://github.com/fishtown-analytics/dbt-utils\n * tag               0.8.2      -> FETCH_HEAD\n * [new tag]         0.0.1      -> 0.0.1\n * [new tag]         0.1.0      -> 0.1.0\n * [new tag]         0.1.1      -> 0.1.1\n * [new tag]         0.1.10     -> 0.1.10\n * [new tag]         0.1.11     -> 0.1.11\n * [new tag]         0.1.12     -> 0.1.12\n * [new tag]         0.1.13     -> 0.1.13\n * [new tag]         0.1.14     -> 0.1.14\n * [new tag]         0.1.15     -> 0.1.15\n * [new tag]         0.1.16     -> 0.1.16\n * [new tag]         0.1.17     -> 0.1.17\n * [new tag]         0.1.18     -> 0.1.18\n * [new tag]         0.1.19     -> 0.1.19\n * [new tag]         0.1.2      -> 0.1.2\n * [new tag]         0.1.20     -> 0.1.20\n * [new tag]         0.1.21     -> 0.1.21\n * [new tag]         0.1.22     -> 0.1.22\n * [new tag]         0.1.23     -> 0.1.23\n * [new tag]         0.1.24     -> 0.1.24\n * [new tag]         0.1.25     -> 0.1.25\n * [new tag]         0.1.3      -> 0.1.3\n * [new tag]         0.1.4      -> 0.1.4\n * [new tag]         0.1.5      -> 0.1.5\n * [new tag]         0.1.6      -> 0.1.6\n * [new tag]         0.1.7      -> 0.1.7\n * [new tag]         0.1.8      -> 0.1.8\n * [new tag]         0.1.9      -> 0.1.9\n * [new tag]         0.2.0      -> 0.2.0\n * [new tag]         0.2.1      -> 0.2.1\n * [new tag]         0.2.2      -> 0.2.2\n * [new tag]         0.2.3      -> 0.2.3\n * [new tag]         0.2.4      -> 0.2.4\n * [new tag]         0.2.5      -> 0.2.5\n * [new tag]         0.3.0      -> 0.3.0\n * [new tag]         0.4.0      -> 0.4.0\n * [new tag]         0.4.1      -> 0.4.1\n * [new tag]         0.5.0      -> 0.5.0\n * [new tag]         0.5.1      -> 0.5.1\n * [new tag]         0.6.0      -> 0.6.0\n * [new tag]         0.6.1      -> 0.6.1\n * [new tag]         0.6.2      -> 0.6.2\n * [new tag]         0.6.3      -> 0.6.3\n * [new tag]         0.6.4      -> 0.6.4\n * [new tag]         0.6.5      -> 0.6.5\n * [new tag]         0.6.6      -> 0.6.6\n * [new tag]         0.7.0      -> 0.7.0\n * [new tag]         0.7.1      -> 0.7.1\n * [new tag]         0.7.2      -> 0.7.2\n * [new tag]         0.7.3      -> 0.7.3\n * [new tag]         0.7.4      -> 0.7.4\n * [new tag]         0.7.4-b1   -> 0.7.4-b1\n * [new tag]         0.7.4b1    -> 0.7.4b1\n * [new tag]         0.7.5      -> 0.7.5\n * [new tag]         0.7.6      -> 0.7.6\n * [new tag]         0.8.0      -> 0.8.0\n * [new tag]         0.8.1      -> 0.8.1\n * [new tag]         0.8.2      -> 0.8.2\n * [new tag]         0.8.3      -> 0.8.3\n * [new tag]         0.8.4      -> 0.8.4\n * [new tag]         0.8.5      -> 0.8.5\n * [new tag]         0.8.6      -> 0.8.6\n * [new tag]         0.9.0      -> 0.9.0\n * [new tag]         0.9.1      -> 0.9.1\n * [new tag]         0.9.2      -> 0.9.2\n * [new tag]         0.9.5      -> 0.9.5\n * [new tag]         0.9.6      -> 0.9.6\n * [new tag]         1.0.0      -> 1.0.0\n * [new tag]         1.0.0-b1   -> 1.0.0-b1\n * [new tag]         1.0.0-b2   -> 1.0.0-b2\n * [new tag]         1.0.0-rc1  -> 1.0.0-rc1\n * [new tag]         1.1.0      -> 1.1.0\n'"
+[0m14:43:31.936780 [debug] [MainThread]: Executing "git tag --list"
+[0m14:43:31.938286 [debug] [MainThread]: STDOUT: "b'0.0.1\n0.1.0\n0.1.1\n0.1.10\n0.1.11\n0.1.12\n0.1.13\n0.1.14\n0.1.15\n0.1.16\n0.1.17\n0.1.18\n0.1.19\n0.1.2\n0.1.20\n0.1.21\n0.1.22\n0.1.23\n0.1.24\n0.1.25\n0.1.3\n0.1.4\n0.1.5\n0.1.6\n0.1.7\n0.1.8\n0.1.9\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.3.0\n0.4.0\n0.4.1\n0.5.0\n0.5.1\n0.6.0\n0.6.1\n0.6.2\n0.6.3\n0.6.4\n0.6.5\n0.6.6\n0.7.0\n0.7.1\n0.7.2\n0.7.3\n0.7.4\n0.7.4-b1\n0.7.4b1\n0.7.5\n0.7.6\n0.8.0\n0.8.1\n0.8.2\n0.8.3\n0.8.4\n0.8.5\n0.8.6\n0.9.0\n0.9.1\n0.9.2\n0.9.5\n0.9.6\n1.0.0\n1.0.0-b1\n1.0.0-b2\n1.0.0-rc1\n1.1.0\n'"
+[0m14:43:31.938534 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:31.938756 [debug] [MainThread]: Executing "git reset --hard tags/0.8.2"
+[0m14:43:31.950051 [debug] [MainThread]: STDOUT: "b'HEAD is now at 5717b10 Fix union_relations error when no include/exclude provided\n'"
+[0m14:43:31.950368 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:31.950615 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m14:43:31.951733 [debug] [MainThread]: STDOUT: "b'5717b109d358844e0f085565b93e74cbe469ecb0\n'"
+[0m14:43:31.951959 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:31.952165 [debug] [MainThread]: Checked out at 5717b10.
+[0m14:43:31.952877 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/fishtown-analytics/dbt-utils.git 859fd0fa21176efee375a447937f7a46"
+[0m14:43:31.954131 [debug] [MainThread]: STDOUT: "b''"
+[0m14:43:31.954391 [debug] [MainThread]: STDERR: "b"fatal: destination path '859fd0fa21176efee375a447937f7a46' already exists and is not an empty directory.\n""
+[0m14:43:31.954600 [debug] [MainThread]: command return code=128
+[0m14:43:31.955194 [debug] [MainThread]: Updating existing dependency 859fd0fa21176efee375a447937f7a46.
+[0m14:43:31.955419 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m14:43:31.956431 [debug] [MainThread]: STDOUT: "b'5717b109d358844e0f085565b93e74cbe469ecb0\n'"
+[0m14:43:31.956717 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:31.956933 [debug] [MainThread]: Checking out revision 0.8.2.
+[0m14:43:31.957140 [debug] [MainThread]: Executing "git remote set-branches origin 0.8.2"
+[0m14:43:31.958453 [debug] [MainThread]: STDOUT: "b''"
+[0m14:43:31.958675 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:31.958888 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.8.2"
+[0m14:43:32.175804 [debug] [MainThread]: STDOUT: "b''"
+[0m14:43:32.176189 [debug] [MainThread]: STDERR: "b'From https://github.com/fishtown-analytics/dbt-utils\n * tag               0.8.2      -> FETCH_HEAD\n'"
+[0m14:43:32.176433 [debug] [MainThread]: Executing "git tag --list"
+[0m14:43:32.177902 [debug] [MainThread]: STDOUT: "b'0.0.1\n0.1.0\n0.1.1\n0.1.10\n0.1.11\n0.1.12\n0.1.13\n0.1.14\n0.1.15\n0.1.16\n0.1.17\n0.1.18\n0.1.19\n0.1.2\n0.1.20\n0.1.21\n0.1.22\n0.1.23\n0.1.24\n0.1.25\n0.1.3\n0.1.4\n0.1.5\n0.1.6\n0.1.7\n0.1.8\n0.1.9\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.3.0\n0.4.0\n0.4.1\n0.5.0\n0.5.1\n0.6.0\n0.6.1\n0.6.2\n0.6.3\n0.6.4\n0.6.5\n0.6.6\n0.7.0\n0.7.1\n0.7.2\n0.7.3\n0.7.4\n0.7.4-b1\n0.7.4b1\n0.7.5\n0.7.6\n0.8.0\n0.8.1\n0.8.2\n0.8.3\n0.8.4\n0.8.5\n0.8.6\n0.9.0\n0.9.1\n0.9.2\n0.9.5\n0.9.6\n1.0.0\n1.0.0-b1\n1.0.0-b2\n1.0.0-rc1\n1.1.0\n'"
+[0m14:43:32.178148 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:32.178363 [debug] [MainThread]: Executing "git reset --hard tags/0.8.2"
+[0m14:43:32.186964 [debug] [MainThread]: STDOUT: "b'HEAD is now at 5717b10 Fix union_relations error when no include/exclude provided\n'"
+[0m14:43:32.187195 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:32.187410 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m14:43:32.188422 [debug] [MainThread]: STDOUT: "b'5717b109d358844e0f085565b93e74cbe469ecb0\n'"
+[0m14:43:32.188646 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:32.188850 [debug] [MainThread]: Already at 5717b10, nothing to do.
+[0m14:43:32.189579 [info ] [MainThread]: Installing https://github.com/fishtown-analytics/dbt-utils.git
+[0m14:43:32.192950 [debug] [MainThread]: Executing "git clone --depth 1 https://github.com/fishtown-analytics/dbt-utils.git 859fd0fa21176efee375a447937f7a46"
+[0m14:43:32.194048 [debug] [MainThread]: STDOUT: "b''"
+[0m14:43:32.194277 [debug] [MainThread]: STDERR: "b"fatal: destination path '859fd0fa21176efee375a447937f7a46' already exists and is not an empty directory.\n""
+[0m14:43:32.194473 [debug] [MainThread]: command return code=128
+[0m14:43:32.194910 [debug] [MainThread]: Updating existing dependency 859fd0fa21176efee375a447937f7a46.
+[0m14:43:32.195127 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m14:43:32.196129 [debug] [MainThread]: STDOUT: "b'5717b109d358844e0f085565b93e74cbe469ecb0\n'"
+[0m14:43:32.196352 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:32.196552 [debug] [MainThread]: Checking out revision 0.8.2.
+[0m14:43:32.196759 [debug] [MainThread]: Executing "git remote set-branches origin 0.8.2"
+[0m14:43:32.198017 [debug] [MainThread]: STDOUT: "b''"
+[0m14:43:32.198241 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:32.198453 [debug] [MainThread]: Executing "git fetch origin --depth 1 --tags 0.8.2"
+[0m14:43:32.402301 [debug] [MainThread]: STDOUT: "b''"
+[0m14:43:32.402729 [debug] [MainThread]: STDERR: "b'From https://github.com/fishtown-analytics/dbt-utils\n * tag               0.8.2      -> FETCH_HEAD\n'"
+[0m14:43:32.402967 [debug] [MainThread]: Executing "git tag --list"
+[0m14:43:32.404442 [debug] [MainThread]: STDOUT: "b'0.0.1\n0.1.0\n0.1.1\n0.1.10\n0.1.11\n0.1.12\n0.1.13\n0.1.14\n0.1.15\n0.1.16\n0.1.17\n0.1.18\n0.1.19\n0.1.2\n0.1.20\n0.1.21\n0.1.22\n0.1.23\n0.1.24\n0.1.25\n0.1.3\n0.1.4\n0.1.5\n0.1.6\n0.1.7\n0.1.8\n0.1.9\n0.2.0\n0.2.1\n0.2.2\n0.2.3\n0.2.4\n0.2.5\n0.3.0\n0.4.0\n0.4.1\n0.5.0\n0.5.1\n0.6.0\n0.6.1\n0.6.2\n0.6.3\n0.6.4\n0.6.5\n0.6.6\n0.7.0\n0.7.1\n0.7.2\n0.7.3\n0.7.4\n0.7.4-b1\n0.7.4b1\n0.7.5\n0.7.6\n0.8.0\n0.8.1\n0.8.2\n0.8.3\n0.8.4\n0.8.5\n0.8.6\n0.9.0\n0.9.1\n0.9.2\n0.9.5\n0.9.6\n1.0.0\n1.0.0-b1\n1.0.0-b2\n1.0.0-rc1\n1.1.0\n'"
+[0m14:43:32.404692 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:32.404912 [debug] [MainThread]: Executing "git reset --hard tags/0.8.2"
+[0m14:43:32.409605 [debug] [MainThread]: STDOUT: "b'HEAD is now at 5717b10 Fix union_relations error when no include/exclude provided\n'"
+[0m14:43:32.409933 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:32.410219 [debug] [MainThread]: Executing "git rev-parse HEAD"
+[0m14:43:32.411274 [debug] [MainThread]: STDOUT: "b'5717b109d358844e0f085565b93e74cbe469ecb0\n'"
+[0m14:43:32.411505 [debug] [MainThread]: STDERR: "b''"
+[0m14:43:32.411710 [debug] [MainThread]: Already at 5717b10, nothing to do.
+[0m14:43:32.411949 [info ] [MainThread]: Installed from revision 0.8.2
+[0m14:43:32.412675 [debug] [MainThread]: Command `dbt deps` succeeded at 14:43:32.412566 after 1.10 seconds
+[0m14:43:32.412935 [debug] [MainThread]: Flushing usage events
+
+
+============================== 14:43:33.895902 | 7e79eab4-acb1-4ce2-bd4e-05f92f84a9a5 ==============================
+[0m14:43:33.895902 [info ] [MainThread]: Running with dbt=1.5.0
+[0m14:43:33.898132 [debug] [MainThread]: running dbt with arguments {'printer_width': '120', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/azureuser/dbt-normalize/normalize', 'log_path': '/home/azureuser/dbt-normalize/normalize/../logs', 'fail_fast': 'False', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'introspect': 'True', 'static_parser': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'False'}
+[0m14:43:33.941767 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+The `log-path` config in `dbt_project.yml` has been deprecated, and will no longer be supported in a future version of
+dbt-core. If you wish to write dbt logs to a custom directory, please use the --log-path CLI flag or DBT_LOG_PATH env
+var instead.
+[0m14:43:33.985650 [debug] [MainThread]: checksum: 4568eb639a77b8fcb3a1f4a07856f42b1ff63f1376652889143968e1dbdafbda, vars: {}, profile: , target: , version: 1.5.0
+[0m14:43:34.037549 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m14:43:34.038083 [debug] [MainThread]: Partial parsing: updated file: airbyte_utils://models/generated/airbyte_ctes/public/pcampus_event_ab2.sql
+[0m14:43:34.059448 [debug] [MainThread]: 1603: static parser failed on generated/airbyte_ctes/public/pcampus_event_ab2.sql
+[0m14:43:34.091206 [debug] [MainThread]: 1602: parser fallback to jinja rendering on generated/airbyte_ctes/public/pcampus_event_ab2.sql
+[0m14:43:34.098725 [warn ] [MainThread]: [[33mWARNING[0m]: Configuration paths exist in your dbt_project.yml file which do not apply to any resources.
+There are 2 unused configuration paths:
+- models.airbyte_utils.generated.airbyte_incremental
+- models.airbyte_utils.generated.airbyte_views
+[0m14:43:34.111589 [info ] [MainThread]: Found 4 models, 0 tests, 0 snapshots, 0 analyses, 743 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
+[0m14:43:34.112895 [info ] [MainThread]: 
+[0m14:43:34.113607 [debug] [MainThread]: Acquiring new postgres connection 'master'
+[0m14:43:34.114532 [debug] [ThreadPool]: Acquiring new postgres connection 'list_datahub_staging'
+[0m14:43:34.123908 [debug] [ThreadPool]: Using postgres connection "list_datahub_staging"
+[0m14:43:34.124183 [debug] [ThreadPool]: On list_datahub_staging: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_datahub_staging"} */
+
+    select distinct nspname from pg_namespace
+  
+[0m14:43:34.124415 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:43:34.133186 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m14:43:34.134345 [debug] [ThreadPool]: On list_datahub_staging: Close
+[0m14:43:34.136250 [debug] [ThreadPool]: Acquiring new postgres connection 'list_datahub_staging_public'
+[0m14:43:34.142170 [debug] [ThreadPool]: Using postgres connection "list_datahub_staging_public"
+[0m14:43:34.142442 [debug] [ThreadPool]: On list_datahub_staging_public: BEGIN
+[0m14:43:34.142671 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m14:43:34.149602 [debug] [ThreadPool]: SQL status: BEGIN in 0.0 seconds
+[0m14:43:34.149912 [debug] [ThreadPool]: Using postgres connection "list_datahub_staging_public"
+[0m14:43:34.150165 [debug] [ThreadPool]: On list_datahub_staging_public: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "normalize", "target_name": "prod", "connection_name": "list_datahub_staging_public"} */
+select
+      'datahub_staging' as database,
+      tablename as name,
+      schemaname as schema,
+      'table' as type
+    from pg_tables
+    where schemaname ilike 'public'
+    union all
+    select
+      'datahub_staging' as database,
+      viewname as name,
+      schemaname as schema,
+      'view' as type
+    from pg_views
+    where schemaname ilike 'public'
+  
+[0m14:43:34.152197 [debug] [ThreadPool]: SQL status: SELECT 4 in 0.0 seconds
+[0m14:43:34.153231 [debug] [ThreadPool]: On list_datahub_staging_public: ROLLBACK
+[0m14:43:34.153689 [debug] [ThreadPool]: On list_datahub_staging_public: Close
+[0m14:43:34.159499 [debug] [MainThread]: Using postgres connection "master"
+[0m14:43:34.159761 [debug] [MainThread]: On master: BEGIN
+[0m14:43:34.159979 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m14:43:34.166679 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:43:34.166945 [debug] [MainThread]: Using postgres connection "master"
+[0m14:43:34.167252 [debug] [MainThread]: On master: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "normalize", "target_name": "prod", "connection_name": "master"} */
+with relation as (
+        select
+            pg_rewrite.ev_class as class,
+            pg_rewrite.oid as id
+        from pg_rewrite
+    ),
+    class as (
+        select
+            oid as id,
+            relname as name,
+            relnamespace as schema,
+            relkind as kind
+        from pg_class
+    ),
+    dependency as (
+        select distinct
+            pg_depend.objid as id,
+            pg_depend.refobjid as ref
+        from pg_depend
+    ),
+    schema as (
+        select
+            pg_namespace.oid as id,
+            pg_namespace.nspname as name
+        from pg_namespace
+        where nspname != 'information_schema' and nspname not like 'pg\_%'
+    ),
+    referenced as (
+        select
+            relation.id AS id,
+            referenced_class.name ,
+            referenced_class.schema ,
+            referenced_class.kind
+        from relation
+        join class as referenced_class on relation.class=referenced_class.id
+        where referenced_class.kind in ('r', 'v')
+    ),
+    relationships as (
+        select
+            referenced.name as referenced_name,
+            referenced.schema as referenced_schema_id,
+            dependent_class.name as dependent_name,
+            dependent_class.schema as dependent_schema_id,
+            referenced.kind as kind
+        from referenced
+        join dependency on referenced.id=dependency.id
+        join class as dependent_class on dependency.ref=dependent_class.id
+        where
+            (referenced.name != dependent_class.name or
+             referenced.schema != dependent_class.schema)
+    )
+
+    select
+        referenced_schema.name as referenced_schema,
+        relationships.referenced_name as referenced_name,
+        dependent_schema.name as dependent_schema,
+        relationships.dependent_name as dependent_name
+    from relationships
+    join schema as dependent_schema on relationships.dependent_schema_id=dependent_schema.id
+    join schema as referenced_schema on relationships.referenced_schema_id=referenced_schema.id
+    group by referenced_schema, referenced_name, dependent_schema, dependent_name
+    order by referenced_schema, referenced_name, dependent_schema, dependent_name;
+[0m14:43:34.173844 [debug] [MainThread]: SQL status: SELECT 0 in 0.0 seconds
+[0m14:43:34.174805 [debug] [MainThread]: On master: ROLLBACK
+[0m14:43:34.175319 [debug] [MainThread]: Using postgres connection "master"
+[0m14:43:34.175573 [debug] [MainThread]: On master: BEGIN
+[0m14:43:34.176317 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:43:34.176601 [debug] [MainThread]: On master: COMMIT
+[0m14:43:34.176833 [debug] [MainThread]: Using postgres connection "master"
+[0m14:43:34.177053 [debug] [MainThread]: On master: COMMIT
+[0m14:43:34.177463 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m14:43:34.177771 [debug] [MainThread]: On master: Close
+[0m14:43:34.178689 [info ] [MainThread]: Concurrency: 8 threads (target='prod')
+[0m14:43:34.179229 [info ] [MainThread]: 
+[0m14:43:34.182617 [debug] [Thread-1 (]: Began running node model.airbyte_utils.pcampus_event_ab1
+[0m14:43:34.183211 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_datahub_staging_public, now model.airbyte_utils.pcampus_event_ab1)
+[0m14:43:34.183511 [debug] [Thread-1 (]: Began compiling node model.airbyte_utils.pcampus_event_ab1
+[0m14:43:34.214433 [debug] [Thread-1 (]: Writing injected SQL for node "model.airbyte_utils.pcampus_event_ab1"
+[0m14:43:34.215031 [debug] [Thread-1 (]: Timing info for model.airbyte_utils.pcampus_event_ab1 (compile): 14:43:34.183697 => 14:43:34.214788
+[0m14:43:34.215766 [debug] [Thread-1 (]: Finished running node model.airbyte_utils.pcampus_event_ab1
+[0m14:43:34.216468 [debug] [Thread-3 (]: Began running node model.airbyte_utils.pcampus_event_ab2
+[0m14:43:34.217133 [debug] [Thread-3 (]: Acquiring new postgres connection 'model.airbyte_utils.pcampus_event_ab2'
+[0m14:43:34.217424 [debug] [Thread-3 (]: Began compiling node model.airbyte_utils.pcampus_event_ab2
+[0m14:43:34.252175 [debug] [Thread-3 (]: Writing injected SQL for node "model.airbyte_utils.pcampus_event_ab2"
+[0m14:43:34.252760 [debug] [Thread-3 (]: Timing info for model.airbyte_utils.pcampus_event_ab2 (compile): 14:43:34.217601 => 14:43:34.252523
+[0m14:43:34.253493 [debug] [Thread-3 (]: Finished running node model.airbyte_utils.pcampus_event_ab2
+[0m14:43:34.254187 [debug] [Thread-5 (]: Began running node model.airbyte_utils.pcampus_event_ab3
+[0m14:43:34.254866 [debug] [Thread-5 (]: Acquiring new postgres connection 'model.airbyte_utils.pcampus_event_ab3'
+[0m14:43:34.255160 [debug] [Thread-5 (]: Began compiling node model.airbyte_utils.pcampus_event_ab3
+[0m14:43:34.330192 [debug] [Thread-5 (]: Writing injected SQL for node "model.airbyte_utils.pcampus_event_ab3"
+[0m14:43:34.330951 [debug] [Thread-5 (]: Timing info for model.airbyte_utils.pcampus_event_ab3 (compile): 14:43:34.255341 => 14:43:34.330717
+[0m14:43:34.331893 [debug] [Thread-5 (]: Finished running node model.airbyte_utils.pcampus_event_ab3
+[0m14:43:34.332608 [debug] [Thread-7 (]: Began running node model.airbyte_utils.pcampus_event
+[0m14:43:34.333061 [info ] [Thread-7 (]: 1 of 1 START sql table model public.pcampus_event ...................................................................... [RUN]
+[0m14:43:34.333890 [debug] [Thread-7 (]: Acquiring new postgres connection 'model.airbyte_utils.pcampus_event'
+[0m14:43:34.334288 [debug] [Thread-7 (]: Began compiling node model.airbyte_utils.pcampus_event
+[0m14:43:34.346097 [debug] [Thread-7 (]: Writing injected SQL for node "model.airbyte_utils.pcampus_event"
+[0m14:43:34.346650 [debug] [Thread-7 (]: Timing info for model.airbyte_utils.pcampus_event (compile): 14:43:34.334479 => 14:43:34.346418
+[0m14:43:34.346946 [debug] [Thread-7 (]: Began executing node model.airbyte_utils.pcampus_event
+[0m14:43:34.380367 [debug] [Thread-7 (]: Writing runtime sql for node "model.airbyte_utils.pcampus_event"
+[0m14:43:34.380931 [debug] [Thread-7 (]: Using postgres connection "model.airbyte_utils.pcampus_event"
+[0m14:43:34.381235 [debug] [Thread-7 (]: On model.airbyte_utils.pcampus_event: BEGIN
+[0m14:43:34.381504 [debug] [Thread-7 (]: Opening a new connection, currently in state init
+[0m14:43:34.390470 [debug] [Thread-7 (]: SQL status: BEGIN in 0.0 seconds
+[0m14:43:34.390786 [debug] [Thread-7 (]: Using postgres connection "model.airbyte_utils.pcampus_event"
+[0m14:43:34.391350 [debug] [Thread-7 (]: On model.airbyte_utils.pcampus_event: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "normalize", "target_name": "prod", "node_id": "model.airbyte_utils.pcampus_event"} */
+
+  
+    
+
+  create  table "datahub_staging".public."pcampus_event__dbt_tmp"
+  
+  
+    as
+  
+  (
+    
+with __dbt__cte__pcampus_event_ab1 as (
+
+-- SQL model to parse JSON blob stored in a single column and extract into separated field columns as described by the JSON Schema
+-- depends_on: "datahub_staging".public._airbyte_raw_pcampus_event
+select
+    jsonb_extract_path_text(_airbyte_data, 'college') as college,
+    jsonb_extract_path_text(_airbyte_data, 'eventid') as eventid,
+    jsonb_extract_path_text(_airbyte_data, 'hideonlinesearch') as hideonlinesearch,
+    jsonb_extract_path_text(_airbyte_data, 'cip_code') as cip_code,
+    jsonb_extract_path_text(_airbyte_data, 'description') as description,
+    jsonb_extract_path_text(_airbyte_data, 'org_code_id') as org_code_id,
+    jsonb_extract_path_text(_airbyte_data, 'create_opid') as create_opid,
+    jsonb_extract_path_text(_airbyte_data, 'class_level') as class_level,
+    jsonb_extract_path_text(_airbyte_data, 'schedule_priority') as schedule_priority,
+    jsonb_extract_path_text(_airbyte_data, 'ceu') as ceu,
+    jsonb_extract_path_text(_airbyte_data, 'event_type') as event_type,
+    jsonb_extract_path_text(_airbyte_data, 'credits') as credits,
+    jsonb_extract_path_text(_airbyte_data, 'revision_date') as revision_date,
+    jsonb_extract_path_text(_airbyte_data, 'event_med_name') as event_med_name,
+    jsonb_extract_path_text(_airbyte_data, 'serial_id') as serial_id,
+    jsonb_extract_path_text(_airbyte_data, 'revision_terminal') as revision_terminal,
+    jsonb_extract_path_text(_airbyte_data, 'department') as department,
+    jsonb_extract_path_text(_airbyte_data, 'create_date') as create_date,
+    jsonb_extract_path_text(_airbyte_data, 'publication_name_1') as publication_name_1,
+    jsonb_extract_path_text(_airbyte_data, 'event_long_name') as event_long_name,
+    jsonb_extract_path_text(_airbyte_data, 'publication_name_2') as publication_name_2,
+    jsonb_extract_path_text(_airbyte_data, 'event_status') as event_status,
+    jsonb_extract_path_text(_airbyte_data, 'general_ed') as general_ed,
+    jsonb_extract_path_text(_airbyte_data, 'create_time') as create_time,
+    jsonb_extract_path_text(_airbyte_data, 'abt_join') as abt_join,
+    jsonb_extract_path_text(_airbyte_data, 'speede_code') as speede_code,
+    jsonb_extract_path_text(_airbyte_data, 'revision_opid') as revision_opid,
+    jsonb_extract_path_text(_airbyte_data, 'create_terminal') as create_terminal,
+    jsonb_extract_path_text(_airbyte_data, 'curriculum') as curriculum,
+    jsonb_extract_path_text(_airbyte_data, 'credit_type') as credit_type,
+    jsonb_extract_path_text(_airbyte_data, 'population') as population,
+    jsonb_extract_path_text(_airbyte_data, 'nontrad_program') as nontrad_program,
+    jsonb_extract_path_text(_airbyte_data, 'event_id') as event_id,
+    jsonb_extract_path_text(_airbyte_data, 'REPEATABLE') as "REPEATABLE",
+    jsonb_extract_path_text(_airbyte_data, 'revision_time') as revision_time,
+    jsonb_extract_path_text(_airbyte_data, 'PROGRAM') as "PROGRAM",
+    _airbyte_ab_id,
+    _airbyte_emitted_at,
+    now() as _airbyte_normalized_at
+from "datahub_staging".public._airbyte_raw_pcampus_event as table_alias
+-- pcampus_event
+where 1 = 1
+),  __dbt__cte__pcampus_event_ab2 as (
+
+-- SQL model to cast each column to its adequate SQL type converted from the JSON schema type
+-- depends_on: __dbt__cte__pcampus_event_ab1
+select
+    cast(college as text) as college,
+    cast(eventid as 
+    bigint
+) as eventid,
+    cast(hideonlinesearch as boolean) as hideonlinesearch,
+    cast(cip_code as text) as cip_code,
+    cast(description as text) as description,
+    cast(org_code_id as text) as org_code_id,
+    cast(create_opid as text) as create_opid,
+    cast(class_level as text) as class_level,
+    cast(schedule_priority as text) as schedule_priority,
+    cast(ceu as 
+    numeric(28, 6)
+) as ceu,
+    cast(event_type as text) as event_type,
+    cast(credits as 
+    numeric(28, 6)
+) as credits,
+    cast(revision_date as DATE) as revision_date,
+    cast(event_med_name as text) as event_med_name,
+    cast(serial_id as text) as serial_id,
+    cast(revision_terminal as text) as revision_terminal,
+    cast(department as text) as department,
+    cast(create_date as DATE) as create_date,
+    cast(publication_name_1 as text) as publication_name_1,
+    cast(event_long_name as text) as event_long_name,
+    cast(publication_name_2 as text) as publication_name_2,
+    cast(event_status as text) as event_status,
+    cast(general_ed as text) as general_ed,
+    cast(create_time as text) as create_time,
+    cast(abt_join as text) as abt_join,
+    cast(speede_code as text) as speede_code,
+    cast(revision_opid as text) as revision_opid,
+    cast(create_terminal as text) as create_terminal,
+    cast(curriculum as text) as curriculum,
+    cast(credit_type as text) as credit_type,
+    cast(population as text) as population,
+    cast(nontrad_program as text) as nontrad_program,
+    cast(event_id as text) as event_id,
+    cast("REPEATABLE" as text) as "REPEATABLE",
+    cast(revision_time as text) as revision_time,
+    cast("PROGRAM" as text) as "PROGRAM",
+    _airbyte_ab_id,
+    _airbyte_emitted_at,
+    now() as _airbyte_normalized_at
+from __dbt__cte__pcampus_event_ab1
+-- pcampus_event
+where 1 = 1
+),  __dbt__cte__pcampus_event_ab3 as (
+
+-- SQL model to build a hash column based on the values of this record
+-- depends_on: __dbt__cte__pcampus_event_ab2
+select
+    md5(cast(coalesce(cast(college as text), '') || '-' || coalesce(cast(eventid as text), '') || '-' || coalesce(cast(hideonlinesearch as text), '') || '-' || coalesce(cast(cip_code as text), '') || '-' || coalesce(cast(description as text), '') || '-' || coalesce(cast(org_code_id as text), '') || '-' || coalesce(cast(create_opid as text), '') || '-' || coalesce(cast(class_level as text), '') || '-' || coalesce(cast(schedule_priority as text), '') || '-' || coalesce(cast(ceu as text), '') || '-' || coalesce(cast(event_type as text), '') || '-' || coalesce(cast(credits as text), '') || '-' || coalesce(cast(revision_date as text), '') || '-' || coalesce(cast(event_med_name as text), '') || '-' || coalesce(cast(serial_id as text), '') || '-' || coalesce(cast(revision_terminal as text), '') || '-' || coalesce(cast(department as text), '') || '-' || coalesce(cast(create_date as text), '') || '-' || coalesce(cast(publication_name_1 as text), '') || '-' || coalesce(cast(event_long_name as text), '') || '-' || coalesce(cast(publication_name_2 as text), '') || '-' || coalesce(cast(event_status as text), '') || '-' || coalesce(cast(general_ed as text), '') || '-' || coalesce(cast(create_time as text), '') || '-' || coalesce(cast(abt_join as text), '') || '-' || coalesce(cast(speede_code as text), '') || '-' || coalesce(cast(revision_opid as text), '') || '-' || coalesce(cast(create_terminal as text), '') || '-' || coalesce(cast(curriculum as text), '') || '-' || coalesce(cast(credit_type as text), '') || '-' || coalesce(cast(population as text), '') || '-' || coalesce(cast(nontrad_program as text), '') || '-' || coalesce(cast(event_id as text), '') || '-' || coalesce(cast("REPEATABLE" as text), '') || '-' || coalesce(cast(revision_time as text), '') || '-' || coalesce(cast("PROGRAM" as text), '') as text)) as _airbyte_pcampus_event_hashid,
+    tmp.*
+from __dbt__cte__pcampus_event_ab2 tmp
+-- pcampus_event
+where 1 = 1
+)-- Final base SQL model
+-- depends_on: __dbt__cte__pcampus_event_ab3
+select
+    college,
+    eventid,
+    hideonlinesearch,
+    cip_code,
+    description,
+    org_code_id,
+    create_opid,
+    class_level,
+    schedule_priority,
+    ceu,
+    event_type,
+    credits,
+    revision_date,
+    event_med_name,
+    serial_id,
+    revision_terminal,
+    department,
+    create_date,
+    publication_name_1,
+    event_long_name,
+    publication_name_2,
+    event_status,
+    general_ed,
+    create_time,
+    abt_join,
+    speede_code,
+    revision_opid,
+    create_terminal,
+    curriculum,
+    credit_type,
+    population,
+    nontrad_program,
+    event_id,
+    "REPEATABLE",
+    revision_time,
+    "PROGRAM",
+    _airbyte_ab_id,
+    _airbyte_emitted_at,
+    now() as _airbyte_normalized_at,
+    _airbyte_pcampus_event_hashid
+from __dbt__cte__pcampus_event_ab3
+-- pcampus_event from "datahub_staging".public._airbyte_raw_pcampus_event
+where 1 = 1
+  );
+  
+[0m14:43:34.548602 [debug] [Thread-7 (]: SQL status: SELECT 3022 in 0.0 seconds
+[0m14:43:34.556731 [debug] [Thread-7 (]: Using postgres connection "model.airbyte_utils.pcampus_event"
+[0m14:43:34.557107 [debug] [Thread-7 (]: On model.airbyte_utils.pcampus_event: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "normalize", "target_name": "prod", "node_id": "model.airbyte_utils.pcampus_event"} */
+alter table "datahub_staging"."public"."pcampus_event" rename to "pcampus_event__dbt_backup"
+[0m14:43:34.558044 [debug] [Thread-7 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:43:34.561086 [debug] [Thread-7 (]: Using postgres connection "model.airbyte_utils.pcampus_event"
+[0m14:43:34.561397 [debug] [Thread-7 (]: On model.airbyte_utils.pcampus_event: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "normalize", "target_name": "prod", "node_id": "model.airbyte_utils.pcampus_event"} */
+alter table "datahub_staging".public."pcampus_event__dbt_tmp" rename to "pcampus_event"
+[0m14:43:34.562262 [debug] [Thread-7 (]: SQL status: ALTER TABLE in 0.0 seconds
+[0m14:43:34.572778 [debug] [Thread-7 (]: Using postgres connection "model.airbyte_utils.pcampus_event"
+[0m14:43:34.573103 [debug] [Thread-7 (]: On model.airbyte_utils.pcampus_event: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "normalize", "target_name": "prod", "node_id": "model.airbyte_utils.pcampus_event"} */
+
+    create  index if not exists
+  "a3702a5d0a13b73ebb76d77315f5cf11"
+  on "datahub_staging".public."pcampus_event" using btree
+  (_airbyte_emitted_at);
+  
+[0m14:43:34.578803 [debug] [Thread-7 (]: SQL status: CREATE INDEX in 0.0 seconds
+[0m14:43:34.595606 [debug] [Thread-7 (]: On model.airbyte_utils.pcampus_event: COMMIT
+[0m14:43:34.595925 [debug] [Thread-7 (]: Using postgres connection "model.airbyte_utils.pcampus_event"
+[0m14:43:34.596198 [debug] [Thread-7 (]: On model.airbyte_utils.pcampus_event: COMMIT
+[0m14:43:34.611307 [debug] [Thread-7 (]: SQL status: COMMIT in 0.0 seconds
+[0m14:43:34.616181 [debug] [Thread-7 (]: Using postgres connection "model.airbyte_utils.pcampus_event"
+[0m14:43:34.616501 [debug] [Thread-7 (]: On model.airbyte_utils.pcampus_event: /* {"app": "dbt", "dbt_version": "1.5.0", "profile_name": "normalize", "target_name": "prod", "node_id": "model.airbyte_utils.pcampus_event"} */
+drop table if exists "datahub_staging".public."pcampus_event__dbt_backup" cascade
+[0m14:43:34.621253 [debug] [Thread-7 (]: SQL status: DROP TABLE in 0.0 seconds
+[0m14:43:34.622563 [debug] [Thread-7 (]: Timing info for model.airbyte_utils.pcampus_event (execute): 14:43:34.347129 => 14:43:34.622370
+[0m14:43:34.622874 [debug] [Thread-7 (]: On model.airbyte_utils.pcampus_event: Close
+[0m14:43:34.624011 [info ] [Thread-7 (]: 1 of 1 OK created sql table model public.pcampus_event ................................................................. [[32mSELECT 3022[0m in 0.29s]
+[0m14:43:34.624883 [debug] [Thread-7 (]: Finished running node model.airbyte_utils.pcampus_event
+[0m14:43:34.626588 [debug] [MainThread]: Using postgres connection "master"
+[0m14:43:34.626847 [debug] [MainThread]: On master: BEGIN
+[0m14:43:34.627072 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m14:43:34.634164 [debug] [MainThread]: SQL status: BEGIN in 0.0 seconds
+[0m14:43:34.634438 [debug] [MainThread]: On master: COMMIT
+[0m14:43:34.634675 [debug] [MainThread]: Using postgres connection "master"
+[0m14:43:34.634897 [debug] [MainThread]: On master: COMMIT
+[0m14:43:34.635297 [debug] [MainThread]: SQL status: COMMIT in 0.0 seconds
+[0m14:43:34.635554 [debug] [MainThread]: On master: Close
+[0m14:43:34.636291 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m14:43:34.636615 [debug] [MainThread]: Connection 'list_datahub_staging' was properly closed.
+[0m14:43:34.636914 [debug] [MainThread]: Connection 'model.airbyte_utils.pcampus_event_ab1' was properly closed.
+[0m14:43:34.637192 [debug] [MainThread]: Connection 'model.airbyte_utils.pcampus_event_ab2' was properly closed.
+[0m14:43:34.637446 [debug] [MainThread]: Connection 'model.airbyte_utils.pcampus_event_ab3' was properly closed.
+[0m14:43:34.637652 [debug] [MainThread]: Connection 'model.airbyte_utils.pcampus_event' was properly closed.
+[0m14:43:34.637978 [info ] [MainThread]: 
+[0m14:43:34.638339 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.52 seconds (0.52s).
+[0m14:43:34.638941 [debug] [MainThread]: Command end result
+[0m14:43:34.648606 [info ] [MainThread]: 
+[0m14:43:34.649001 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m14:43:34.649332 [info ] [MainThread]: 
+[0m14:43:34.649677 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
+[0m14:43:34.650270 [debug] [MainThread]: Command `dbt run` succeeded at 14:43:34.650168 after 0.76 seconds
+[0m14:43:34.650535 [debug] [MainThread]: Flushing usage events

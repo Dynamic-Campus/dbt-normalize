@@ -1,0 +1,1 @@
+{"ssl":false,"host":"172.173.219.183","port":5432,"schema":"public","database":"datahub_staging","password":"my4thpass","ssl_mode":{"mode":"disable"},"username":"azureuser","tunnel_method":{"tunnel_method":"NO_TUNNEL"}}

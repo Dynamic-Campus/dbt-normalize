@@ -21,7 +21,7 @@ select
     cast({{ adapter.quote('Enrollment Major 1') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('enrollment_major_1') }},
     cast({{ adapter.quote('Class Level') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('class_level') }},
     cast({{ adapter.quote('Your Unique Identifier') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('your_unique_identifier') }},
-    cast({{ adapter.quote('Search Date') }} as {{ dbt_utils.type_bigint() }}) as {{ adapter.quote('search_date') }},
+    cast({{ adapter.quote('Search Date') }} as DATE ) as {{ adapter.quote('search_date') }},
     cast({{ adapter.quote('College State') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('college_state') }},
     cast({{ adapter.quote('Middle Initial') }} as {{ dbt_utils.type_string() }}) as {{ adapter.quote('middle_initial') }},
     cast({{ adapter.quote('Enrollment Begin') }} as DATE ) as {{ adapter.quote('enrollment_begin') }},

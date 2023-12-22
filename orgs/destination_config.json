@@ -1,0 +1,1 @@
+{"ssl":false,"host":"10.134.2.167","port":5432,"schema":"public","database":"datamart_raw","password":"dGHGzYNXdS9rz4x6D3gavc","ssl_mode":{"mode":"disable"},"username":"airbyte","tunnel_method":{"tunnel_method":"NO_TUNNEL"}}

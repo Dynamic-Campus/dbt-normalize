@@ -7,9 +7,9 @@
 select
     _airbyte_orgs_hashid,
     cast(seq as {{ dbt_utils.type_float() }}) as seq,
-    cast({{ adapter.quote('limit') }} as nvarchar(500) ) as {{ adapter.quote('limit') }},
-    cast(title as nvarchar(500) ) as title,
-    cast(useracct as nvarchar(500) ) as useracct,
+    cast({{ adapter.quote('limit') }} as varchar(500) ) as {{ adapter.quote('limit') }},
+    cast(title as varchar(500) ) as title,
+    cast(useracct as varchar(500) ) as useracct,
     _airbyte_ab_id,
     _airbyte_emitted_at,
     {{ current_timestamp() }} as _airbyte_normalized_at

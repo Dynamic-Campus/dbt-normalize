@@ -1,6 +1,5 @@
 {{ config(
-    indexes = [{'columns':['_airbyte_emitted_at'],'type':'btree'}],
-    schema = "public",
+    schema = "dbo",
     post_hook = ["
                     {%
                         set scd_table_relation = adapter.get_relation(

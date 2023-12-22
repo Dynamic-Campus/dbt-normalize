@@ -34,30 +34,26 @@ models:
       airbyte_incremental:
         +tags: incremental_tables
         +materialized: incremental
-        +on_schema_change: sync_all_columns
       airbyte_tables:
         +tags: normalized_tables
         +materialized: table
       airbyte_views:
         +tags: airbyte_internal_views
         +materialized: view
-dispatch:
-- macro_namespace: dbt_utils
-  search_order:
-  - airbyte_utils
-  - dbt_utils
 vars:
+  dbt_utils_dispatch_list:
+  - airbyte_utils
   json_column: _airbyte_data
   models_to_source:
-    orgs_ab1: public._airbyte_raw_orgs
-    orgs_ab2: public._airbyte_raw_orgs
-    orgs_ab3: public._airbyte_raw_orgs
-    orgs: public._airbyte_raw_orgs
-    orgs__id_ab1: public._airbyte_raw_orgs
-    orgs__id_ab2: public._airbyte_raw_orgs
-    orgs__id_ab3: public._airbyte_raw_orgs
-    orgs__id: public._airbyte_raw_orgs
-    orgs_steps_ab1: public._airbyte_raw_orgs
-    orgs_steps_ab2: public._airbyte_raw_orgs
-    orgs_steps_ab3: public._airbyte_raw_orgs
-    orgs_steps: public._airbyte_raw_orgs
+    orgs_ab1: dbo._airbyte_raw_orgs
+    orgs_ab2: dbo._airbyte_raw_orgs
+    orgs_ab3: dbo._airbyte_raw_orgs
+    orgs: dbo._airbyte_raw_orgs
+    orgs__id_ab1: dbo._airbyte_raw_orgs
+    orgs__id_ab2: dbo._airbyte_raw_orgs
+    orgs__id_ab3: dbo._airbyte_raw_orgs
+    orgs__id: dbo._airbyte_raw_orgs
+    orgs_steps_ab1: dbo._airbyte_raw_orgs
+    orgs_steps_ab2: dbo._airbyte_raw_orgs
+    orgs_steps_ab3: dbo._airbyte_raw_orgs
+    orgs_steps: dbo._airbyte_raw_orgs

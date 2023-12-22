@@ -6,12 +6,13 @@ config:
 normalize:
   outputs:
     prod:
-      dbname: datamart_raw
-      host: 10.134.2.167
-      pass: dGHGzYNXdS9rz4x6D3gavc
-      port: 5432
-      schema: public
+      database: airbytetestdb
+      driver: ODBC Driver 17 for SQL Server
+      password: TRP4yunvNKsnw7k5BeY6qw
+      port: 1433
+      schema: dbo
+      server: airbytetest.database.windows.net
       threads: 8
-      type: postgres
-      user: airbyte
+      type: sqlserver
+      user: Airbyteadmin
   target: prod
